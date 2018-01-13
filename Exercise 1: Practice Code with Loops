@@ -14,23 +14,23 @@
             for (i = 1; i <= 300; i++){
                 
                 if (i%3 === 0 && i%5 === 0) {
-                         document.write("Fizz Fuzz" + "<br />");
+                         console.log("Fizz Fuzz" + "<br />");
                 }
                 //Number is divisible by 3 and 5, replaced with "Fizz Fuzz"
                 
                 else if (i%3 === 0) {
-                    document.write("Fizz" + "<br />");
+                    console.log("Fizz" + "<br />");
                 }
                 //Number divisible only by 3, replaced with "Fizz"
                 
                 else if (i%7 === 0){
-                    document.write("Fuzz" + "<br />");
+                    console.log("Fuzz" + "<br />");
                 }
                 
                 //Number divisible by 7, replaced with "Fuzz"
                 
                 else {
-                document.write(i + "<br />");
+                console.log(i + "<br />");
                 }
                 //Number not divisible by any of the parameters above, only number is displayed
             }
@@ -46,7 +46,7 @@
                 var d = b.substr(0, c);
                 //substring displays length of b from the beginning to var c, which is reduced every loop
                 
-                document.write(d + "<br />");
+                console.log(d + "<br />");
                 
                 --c;
             }                    
