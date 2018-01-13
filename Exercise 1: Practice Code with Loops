@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <title>Looping 300 times, Fizz Fuzz, and a christmas tree</title>
+        <meta charset="utf-8">
+    </head>
+    
+    <body>
+        <script>
+            //Parts 1 and 2.  Loops 300 times
+            var i = 1;
+            
+            for (i = 1; i <= 300; i++){
+                
+                if (i%3 === 0 && i%5 === 0) {
+                         document.write("Fizz Fuzz" + "<br />");
+                }
+                //Number is divisible by 3 and 5, replaced with "Fizz Fuzz"
+                
+                else if (i%3 === 0) {
+                    document.write("Fizz" + "<br />");
+                }
+                //Number divisible only by 3, replaced with "Fizz"
+                
+                else if (i%7 === 0){
+                    document.write("Fuzz" + "<br />");
+                }
+                
+                //Number divisible by 7, replaced with "Fuzz"
+                
+                else {
+                document.write(i + "<br />");
+                }
+                //Number not divisible by any of the parameters above, only number is displayed
+            }
+            
+            //Part 3.  Creates a pound key triangle, number of # goes down by one each loop
+            
+            var a = 7;
+            var b = "#######";
+            var c = b.length;
+            
+            for (a = 7; a > 0; a--) {
+                
+                var d = b.substr(0, c);
+                //substring displays length of b from the beginning to var c, which is reduced every loop
+                
+                document.write(d + "<br />");
+                
+                --c;
+            }                    
+        </script>
+    </body>
+
+</html>
