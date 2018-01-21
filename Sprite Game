@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta charset="utf-8">
+        <title>Sprite Game</title>
+        
+        <style>
+            html, body {
+                height: 100%;
+                width: 100%;
+                margin: 0;
+                padding: 0;
+                    
+            }
+            
+            div.top {
+                background-color: green;
+                height: 7.5%;
+                width: 100%;
+                margin-top: 0px;
+                font-size: 1rem; 
+                display: inline-block;
+            }
+            
+            #map {
+                position: fixed;
+                width: 70%;
+                height: 1041px;
+                float: left;
+                background-attachment: fixed;
+            }
+            
+            div.sidebar {
+                background-color: pink;
+                width: 30%;
+                height: 84%;
+                float: right;
+
+            }
+            
+            #sprite {
+                position: absolute;
+                left: 28%;
+                top: 40%;
+                background-attachment: fixed;
+            }
+            
+            
+            div.bottom {
+                position: static;
+                background-color: burlywood;
+                height: 9%;
+                width: 100%;
+                font-size: 1rem; 
+                display: inline-block; 
+                margin: 0;
+                padding: 0;
+                position: fixed;
+                bottom: 0;
+            }
+            p, h2, h3 {
+                text-align: center;
+                margin: 0px;
+            }
+            h1 {
+                margin-left: 10%;
+            }
+
+            div.button {
+                text-align: center;
+            }
+            
+        </style>
+        
+    </head>
+    
+    <body>
+        <div class="top">
+            <!--This contains the top banner-->
+            <h1>Grand Hawaiian Tour</h1>
+        </div>  
+        <div class="map">
+            <!--This contains the map-->
+            <img src="map.jpg" alt="map" id="map" />
+            <img src="sprite.png" alt="sprite thing" id="sprite"/> 
+        </div>
+        <div class="sidebar">
+            <h3>Colomn 'o buttons</h3>
+            <br />
+            <p>This is an awesome game!</p>
+            <br />
+            <div class="button">
+            <button id="button">Click to play</button> 
+            <br />
+            <button>Toss in the towel</button>
+            </div>
+        </div>
+        <div class="bottom">
+            <!--This contains the bottom banner-->
+            <h2>Copyright &copy BC Game Demons</h2>
+        </div>
+      
+    </body>
+ 
+</html>
