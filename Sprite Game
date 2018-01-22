@@ -7,100 +7,100 @@
         
         <style>
             html, body {
-                height: 100%;
-                width: 100%;
+                height: 625px;
+                width: 667px;
                 margin: 0;
-                padding: 0;
-                    
+                padding: 0;                 
             }
-            
-            div.top {
-                background-color: green;
-                height: 7.5%;
+
+            .top {
+                background-color: darkseagreen;
+                height: 10%;
                 width: 100%;
                 margin-top: 0px;
-                font-size: 1rem; 
+                font-size: 13px; 
                 display: inline-block;
+                float:left;
             }
-            
-            #map {
-                position: fixed;
-                width: 70%;
-                height: 1041px;
+                    
+            .map {
+                clear:all;
+                background-repeat: no-repeat;
+                background-image:url(map.jpg);
+                width: 75%;
+                height: 80%;
                 float: left;
-                background-attachment: fixed;
             }
             
-            div.sidebar {
+            .sidebar {
                 background-color: pink;
-                width: 30%;
-                height: 84%;
-                float: right;
-
+                width: 25%;
+                height: 80%;
+                float:left;
+                text-align:center;
             }
             
             #sprite {
                 position: absolute;
-                left: 28%;
-                top: 40%;
+                left: 178px;
+                top: 222px;
                 background-attachment: fixed;
             }
-            
-            
-            div.bottom {
-                position: static;
+                 
+            .bottom {
+                clear:both;
                 background-color: burlywood;
-                height: 9%;
+                height: 10%;
                 width: 100%;
-                font-size: 1rem; 
-                display: inline-block; 
+                font-size: 14px; 
+                display: inline-block;
+                float:left;    
                 margin: 0;
                 padding: 0;
-                position: fixed;
-                bottom: 0;
             }
-            p, h2, h3 {
+            
+            h2, h4 {
                 text-align: center;
-                margin: 0px;
             }
+            
             h1 {
-                margin-left: 10%;
+                margin-left: 50px;
             }
 
-            div.button {
-                text-align: center;
+            button {
+                border-radius:10px;
             }
             
         </style>
-        
     </head>
     
     <body>
         <div class="top">
             <!--This contains the top banner-->
             <h1>Grand Hawaiian Tour</h1>
-        </div>  
+        </div> 
+        
         <div class="map">
-            <!--This contains the map-->
-            <img src="map.jpg" alt="map" id="map" />
+            <!--This contains the map and the sprite-->
             <img src="sprite.png" alt="sprite thing" id="sprite"/> 
         </div>
+        
         <div class="sidebar">
-            <h3>Colomn 'o buttons</h3>
+            <!--This contains the pink sidebar-->
+            <h4>Column 'o buttons</h4>
             <br />
-            <p>This is an awesome game!</p>
+            This is awesome game
+            <br /><br />
+            <button class="button">click to play </button>
             <br />
-            <div class="button">
-            <button id="button">Click to play</button> 
-            <br />
-            <button>Toss in the towel</button>
-            </div>
+            <button class="button">toss in the towel  </button>
         </div>
+        
         <div class="bottom">
             <!--This contains the bottom banner-->
-            <h2>Copyright &copy BC Game Demons</h2>
-        </div>
-      
+            <h2>Copyright &copy; BC Game Demons</h2>
+        </div>       
+        
     </body>
- 
+      
 </html>
