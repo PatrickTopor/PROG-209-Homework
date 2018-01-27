@@ -1,0 +1,97 @@
+
+<!DOCTYPE HTML>
+<html>
+    
+    <head>
+    
+        <meta charset="UTF-8">
+    
+        <title>HTML 5 Web Storage</title>
+
+        <link href="reset.css" type="text/css" rel="stylesheet" />
+
+        <link href="storage.css" type="text/css" rel="stylesheet" />
+
+        <script>
+            window.addEventListener("load",init);
+
+            function init(){
+	           if(typeof(Storage)!=="undefined"){
+                display();
+	           var button=document.getElementById("button");
+	           button.addEventListener("click",saveInfo);
+	       }
+	
+	       else{
+	           //old bowser	
+	           }
+            }
+
+            function saveInfo(){
+	           var filling=document.getElementById("filling").value;
+               var sprinkles=document.getElementById("sprinkles").value;
+               var toppings=document.getElementById("toppings").value;
+	           var glaze=document.getElementById("glaze").value;
+	
+	           localStorage.setItem("fillingType",filling);
+               localStorage.setItem("sprinklesType",sprinkles);
+               localStorage.setItem("toppingType",toppings);
+	           localStorage.setItem("userGlaze",glaze);
+	           display();
+	
+            }
+
+            function display(){
+	           var rightBox=document.getElementById("useroutput");
+	           var theFilling=localStorage.getItem("fillingType");
+               var theSprinkles=localStorage.getItem("sprinklesType");
+               var theTopping=localStorage.getItem("toppingType");
+	           var theGlaze=localStorage.getItem("userGlaze");
+	
+	           if(theGlaze==undefined){
+		          document.getElementById("useroutput").innerHTML="";
+	               }
+                
+	           else { 
+        document.getElementById("useroutput").innerHTML="OUTPUT  <hr /><br /><br />The Filling: "+theFilling+ 
+            "<br /><br />  The Sprinkles: " + theSprinkles + 
+            "<br /><br />  The Glaze: " +theGlaze + 
+            "<br /><br />  The Weather: " + theTopping;
+	           }	
+            }
+        </script>
+
+    </head>
+
+    <body>
+    
+        <div id="main">
+	       <section id="userinput">
+            INPUT <br>
+	       <hr />
+           <br /><br />
+           <form>
+    
+                <div>Donut filling: <br /><input type="input" id="filling" size="20"></div>
+                <br />
+                <div>Donut sprinkles: <br /><input type="input" id="sprinkles" size="20"></div>
+                <br />
+                <div>Donut toppings: <br /><input type="input" id="toppings" size="20"></div>
+                <br />
+                <div>Donut glaze:<br /> <textarea id="glaze" rows="10"></textarea></div>
+                <br />
+                <div><input type="button" id="button" value="Save"></div>
+    
+            </form>
+            </section>
+ 
+            <section id="useroutput">
+              OUTPUT  
+ 	          <hr />
+              <br /><br />
+            </section>
+        </div>
+
+    </body>
+    
+</html>
