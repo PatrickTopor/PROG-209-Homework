@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Color Picker</title>
+    
+    <style>
+        
+        #main {
+            width: 600px;
+            height: 600px;
+            background-color: antiquewhite;
+            margin-left: 40%;
+            margin-top: 100px;
+        }
+        
+        input {
+            margin-top: 5px;
+            margin-left: 39%;
+        }
+        
+        #buttons {
+            text-align: center;
+        }
+        h1, h4, p {
+        text-align: center;
+        }
+        
+    </style>
+    
+</head>
+    
+<body>
+  
+    <div id="main">
+        <h1>Color Picker!</h1> 
+            <br />
+        <h4>For each input field below, please enter a number between 0 and 255</h4>
+            <p>Input: Red</p>
+                <input type="text" id="source1">
+            <p>Input: Green</p>
+                <input type="text" id="source2">
+            <p>Input: Blue</p>
+                <input type="text" id="source3">
+            <br /><br />
+        
+            <div id="buttons">
+            <button id="btn3" onclick="getColor()" >Press me for Color!</button>
+                <br /><br />
+            <button id="btn" onclick="resetColor()" >Reset</button>
+            </div>
+        
+            <br />
+            <p>OUTPUT</p>
+                <input type= "text" id="display">    
+    </div>    
+    
+  <script>
+    
+  let box = document.getElementById('display');
+  
+  function getColor()
+  {
+    let red = document.getElementById('source1').value;
+    let green = document.getElementById('source2').value;
+    let blue = document.getElementById('source3').value;
+    box.style.backgroundColor = "rgb(" + (red)+ "," + (green) +","+  (blue)+")";
+  }
+      
+    function resetColor()
+  {
+    document.getElementById('source1').value = " "; 
+    document.getElementById('source2').value = " "; 
+    document.getElementById('source3').value = " "; 
+    box.style.backgroundColor = "rgb(255,255,255)";
+  }
+      
+</script>
+    
+</body>
+    
+</html>
