@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        
+        <meta charset="utf-8">
+        <title>Week 3</title>
+        <style>
+
+        #main {
+            width: 200px;
+            background-color: black;
+            color: yellow;
+            font-weight: bold;
+            text-align: center;
+            }
+            
+        </style>
+        
+    </head>
+    
+    <body>
+        
+        <script>
+            
+        var planetNames = ["Jupiter", "Venus", "Saturn", "Mars", "Delvania"];
+        var distancesFromEarth = [5.2, 0.72, 9.5, 1.5, 11.11];
+        var sunnyInAugust = [false, true, false, true, true];
+
+        for(var i = 0; i < planetNames.length; i++)
+        {
+            document.write(planetNames[i] + "<br />");
+            document.write(distancesFromEarth[i] + "<br />");
+            document.write(sunnyInAugust[i] + "<br />");
+            document.write("----------" + "<br />");
+        }
+            
+        </script>
+        
+            <div id="main">
+                
+        <script>
+            
+            for(var i = 0; i < planetNames.length; i++)
+            {
+                if(sunnyInAugust[i] == true)
+                {
+                document.write(planetNames[i] + " Is Sunny in August!" + "<br />" + "<br />")
+                } 
+                else {
+                    document.write(planetNames[i] + " Is not Sunny in August!" + "<br />" + "<br />")
+                }
+            }
+            
+        </script>
+
+        </div>
+        
+    </body>
+    
+</html>
