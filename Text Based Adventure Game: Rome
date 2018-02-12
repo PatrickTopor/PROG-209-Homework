@@ -85,7 +85,7 @@ var itemLocations = [1, 2, 8];
             
            
             
-//Player gets dropped off here and what he can do
+//Player gets dropped off here and what they can do
 var playerLocation = 4;
 var playersInput = "";
 var actionsIKnow  = ["north", "east", "south","west", "take", "use"];
@@ -199,7 +199,7 @@ function playGame()
           
     		  
 		default:
-		  gameMessage = "Do you mean to go: north, south, east west?  Or did you want to take something?";
+		  gameMessage = "Do you mean to go: north, south, east or west?  Or did you want to take something?";
   }
   
   render();
@@ -253,7 +253,7 @@ function useItem()
         case "cow": 
 	      if(playerLocation === 6)
             {
-            gameMessage = "You prepare the cow by making it lie down on the alter." + "<br />";
+            gameMessage = "You prepare the cow by making it lie down on the altar." + "<br />";
             gameMessage += "Now you need to go get the priest.";
             }
         else
@@ -281,7 +281,7 @@ function useItem()
 	      if(playerLocation === 6)
         {    
           gameMessage = "You raise the knife in the air and plunge it into the cow.  " + "<br />";
-          gameMessage += "The god Apollo himslef comes down and blesses you victory in battle." + "<br />"; 
+          gameMessage += "The god Apollo himself comes down and blesses you victory in battle." + "<br />"; 
           gameMessage += "He then gives you a laurel, so that your men may be healed during the midst of battle.";    
             
           //Give the player the Laurel for battle    
