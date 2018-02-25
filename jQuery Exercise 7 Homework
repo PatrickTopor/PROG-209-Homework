@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+
+<html>
+    
+<head>
+</head>
+    
+    <body>
+        
+        <!--Exercise 1-->
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script>
+         $(document).ready( function() 
+        {
+            console.log("Welcome to 209");
+         }
+        </script>
+        
+    </body>
+    
+</html>
+
+<!DOCTYPE html>
+
+<html>
+    
+<head>
+</head>
+    
+    <body>
+        <h1 id="name"></h1>
+        <!--Exercise 2-->
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script>
+        $(document).ready
+        ( 
+            function() 
+            {
+                var message = document.getElementById('name');
+                message.innerHTML = "Patrick Topor-Madry";
+            }
+        );
+        </script>
+        
+    </body>
+    
+</html>
+
+<!DOCTYPE html>
+
+<html>
+    
+<head>
+</head>
+    
+    <body>
+        <div id="image">
+            <img src="helloImage.png" alt="hello World picture" height="100px" width="100px">
+        </div>
+        <!--Exercise 3-->
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script>
+        $(document).ready( function() 
+        {
+            $("#image").click( function()
+            {
+                $(this).fadeOut();
+                
+            })//end function
+        });
+        </script>
+        
+    </body>
+    
+</html>
+
+
+<!DOCTYPE html>
+
+<html>
+    
+<head>
+    <style>
+            .error {
+            background: red;
+            border: 1px solid black;
+            padding: 5em;
+            }
+        
+        .msg {
+            background: green;
+            border: 1px solid black;
+            padding: 5em;
+            }
+    </style>
+</head>
+    
+    <body>
+        
+        <!--Exercise 4-->
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script>
+        $(function(){
+            "use strict";
+
+	   var $form = $("#form");
+	
+	   //$form.find(".group:nth-child(1)")
+		$("p:first").addClass("error");
+	
+	   //$form.find(".group:nth-child(2)")
+		$("p:nth-child(6)").append('<p>Required</p>');
+            
+        //$form.find(".group:nth-child(3)")
+		$("p:nth-child(10)").addClass('msg')
+		.append("<p>Good choice!</p>");
+        });
+        </script>
+        <div id="form">
+            <br />
+            <p>Please enter your name</p>
+            <br />
+            <input type="text" id="one" value=" ">
+            <br />
+            <p>Please enter your number</p>
+            <br />
+            <input type="text" id="two" value=" ">
+            <br />
+            <p>Please enter your favorite color</p>
+            <br />
+            <input type="text" id="three" value=" ">
+        </div>
+    </body>
+    
+</html>
+
+<!DOCTYPE html>
+
+<html>
+    
+<head>
+    
+<style>
+        
+    #image2
+    {
+    position: absolute;
+    left: 0px;
+    }
+             
+</style>
+    
+</head>
+    
+    <body>
+        
+        <!--Exercise 6-->
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script>
+        $(document).ready( function() 
+        {
+            $("#btn").click( function()
+            {
+                $("#image2").animate( {left: '+=1000px', opacity: 0.5}, 2000, 'linear');
+                
+            })//end function
+        });
+        </script>
+        
+        <button id="btn">Press me to move the image!</button>
+
+        <div id="image2">
+            <img src="moveMe.jpeg" alt="move me picture" height="100px" width="100px">
+        </div>
+        
+    </body>
+    
+</html>
