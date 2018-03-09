@@ -1,0 +1,46 @@
+//HTML file
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <title>Road Signs</title>
+        <meta charset="utf-8">
+    </head>
+    
+    <body>
+        <canvas id="sign1" width="1000" height="1000"></canvas>
+        <script src="roadsign.js"></script>
+
+        
+    </body>
+    
+</html>
+
+/*Javascript file*/
+            var canvas = document.querySelector("#sign1");
+            var ctx = canvas.getContext("2d");
+            ctx.save();	
+            //create outline
+            ctx.lineWidth = 32;	         
+            ctx.strokeStyle = "red";
+            ctx.fillStyle = "red";
+           
+
+            // create circle
+            ctx.beginPath();
+            ctx.arc(300, 300, 250, 0, 2*Math.PI);
+            ctx.fillStyle = "red";
+            ctx.stroke();	
+
+            // draw do not text
+            ctx.fillStyle  = "red";
+            ctx.font = "bold 100px Arial";
+            ctx.fillText( "Do Not" ,140, 230);
+            
+            //red line between words
+            ctx.fillStyle = "#FF0000";
+            ctx.fillRect(130,270,340,70); 
+            
+            //draw enter text    
+            ctx.fillText( "Enter" ,180, 440);            
+            ctx.restore();	
