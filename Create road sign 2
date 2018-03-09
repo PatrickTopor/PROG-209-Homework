@@ -1,0 +1,58 @@
+//HTML file
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        
+        <title>Road Signs 2</title>
+        <meta charset="utf-8">
+
+    </head>    
+    
+    <body>
+        
+        <canvas id="sign2" width="1000" height="1000"></canvas>
+        <script src="roadsign2.js"></script>
+        
+    </body>
+    
+</html>
+
+/*Javascript file*/
+            var canvasElement = document.querySelector("#sign2");
+            var context = canvasElement.getContext("2d");
+ 
+            // the triangle
+            context.beginPath();
+            context.moveTo(200, 500);
+            context.lineTo(600, 500);
+            context.lineTo(400, 200);
+            context.closePath();
+            
+ 
+            // the outline
+            context.lineWidth = 30;
+            context.strokeStyle = "red";
+            context.stroke();
+
+            // the fill color
+            context.fillStyle = "white";
+            context.fill();
+            
+            //The straight line
+            context.lineWidth = 20;
+            context.beginPath();
+            context.moveTo(450, 300);
+            context.lineTo(450, 490);
+            context.strokeStyle = "black";
+            context.stroke();
+            
+            //The curved line
+            context.lineWidth = 20;
+            context.beginPath();
+            context.moveTo(350, 300);
+            context.lineTo(350, 390);
+            context.lineTo(300, 420);
+            context.lineTo(300, 490);
+            context.strokeStyle = "black";
+            context.stroke();
